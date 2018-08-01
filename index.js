@@ -12,12 +12,16 @@ class Driver {
 
 class Route {
   constructor(beginningLocation, endingLocation) {
-    this.beginningLocation = beginningLocation
-    this.endingLocation = endingLocation
+    this.beginningLocation = beginningLocation;
+    this.endingLocation = endingLocation;
   }
   blocksTravelled() {
-    if(this.beginningLocation === this.endingLocation) {
-      return Math.abs(this.beginningLocation - this.endingLocation)
+    let vert = Math.abs(this.beginningLocation.vertical - this.endingLocation.vertical)
+    let hor = eastWest.indexOf(this.beginningLocation.horizontal) - eastWest.indexOf(this.endingLocation.horiztonal)
+
+    if (this.beginningLocation.horizontal === this.endingLocation.horizontal) {
+    return vert
     }
+    return hor + 1 + vert
   }
 }
