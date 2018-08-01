@@ -9,7 +9,7 @@ class Driver {
     return (year - test - 1)
   }
 }
-
+ 
 class Route {
   constructor(beginningLocation, endingLocation) {
     this.beginningLocation = beginningLocation;
@@ -17,12 +17,13 @@ class Route {
   }
   blocksTravelled() {
     let eastWest = ['1st Avenue', '2nd Avenue', '3rd Avenue', 'Lexington Avenue', 'Park', 'Madison Avenue', '5th Avenue']
-    let vert = Math.abs(this.beginningLocation.vertical - this.endingLocation.vertical)
-    let hor = eastWest.indexOf(this.beginningLocation.horizontal) - eastWest.indexOf(this.endingLocation.horiztonal)
+    let vert = Math.abs(this.beginningLocation.vertical             - this.endingLocation.vertical)
+    let hor = eastWest.indexOf            (this.beginningLocation.horizontal) + 1 -     eastWest.indexOf(this.endingLocation.horiztonal) + 1
 
     if (this.beginningLocation.horizontal === this.endingLocation.horizontal) {
     return vert
     }
-    return hor + 1 + vert
+    return hor + vert + 1
   }
 }
+
