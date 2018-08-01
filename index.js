@@ -25,4 +25,8 @@ class Route {
     }
     return hor + vert + 1
   }
+
+  estimatedTime() {
+     return this.blocksTravelled() * 3
+   }
 }
